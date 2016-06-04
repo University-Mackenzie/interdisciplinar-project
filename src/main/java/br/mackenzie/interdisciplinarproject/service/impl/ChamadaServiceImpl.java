@@ -21,5 +21,4 @@ public class ChamadaServiceImpl implements ChamadaService{
 	public List<Chamada> listarChamadas() {
 		return chamadaDAO.listar();
 	}
-
 }
