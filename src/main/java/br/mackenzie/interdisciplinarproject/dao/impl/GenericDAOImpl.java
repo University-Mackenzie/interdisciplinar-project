@@ -14,7 +14,7 @@ import br.mackenzie.interdisciplinarproject.dao.GenericDAO;
 
 /**
  * 
- * @author julio.cesar.maciel
+ * @author jony.fernando.schulz
  *
  * @param <T>
  * @param <PK>

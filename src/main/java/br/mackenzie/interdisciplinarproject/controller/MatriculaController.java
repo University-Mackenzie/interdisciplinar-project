@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import br.mackenzie.interdisciplinarproject.model.Chamada;
-import br.mackenzie.interdisciplinarproject.service.ChamadaService;
+import br.mackenzie.interdisciplinarproject.model.Matricula;
+import br.mackenzie.interdisciplinarproject.service.MatriculaService;
 import br.mackenzie.interdisciplinarproject.util.Utils;
 
 /**
@@ -17,27 +17,28 @@ import br.mackenzie.interdisciplinarproject.util.Utils;
  * @author jonyfernandoschulz
  *
  */
+
 @Controller
-@RequestMapping("/chamada")
-public class ChamadaController {
+@RequestMapping("/matricula")
+public class MatriculaController {
 	
 	@Autowired
-	private ChamadaService chamadaservice;
+	private MatriculaService matriculaservice;
 	
 	Utils utils = new Utils();
-	
+
 	/**
-	 * Metodo que tem como funcao listar Chamadas em aulas.
+	 * Metodo que tem como funcao listar Aulas.
 	 * 
-	 * @return jsonChamadas
+	 * @return jsonMatricula
 	 */
 	@RequestMapping(value = "/listar", method = RequestMethod.GET)
 	@ResponseBody
 	public String listar() {
 
-		List<Chamada> chamadas = chamadaservice.listarChamadas();
+		List<Matricula> matriculas = matriculaservice.listarMatriculas();
 
-		String jsonChamadas = utils.convertToJson(chamadas);
-		return jsonChamadas;
+		String jsonMatricula = utils.convertToJson(matriculas);
+		return jsonMatricula;
 	}
 }
