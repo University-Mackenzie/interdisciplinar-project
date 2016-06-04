@@ -8,26 +8,36 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import br.mackenzie.interdisciplinarproject.model.Chamada;
-import br.mackenzie.interdisciplinarproject.service.ChamadaService;
+import br.mackenzie.interdisciplinarproject.model.Usuario;
+import br.mackenzie.interdisciplinarproject.service.UsuarioService;
 import br.mackenzie.interdisciplinarproject.util.Utils;
 
+/**
+ * 
+ * @author jonyfernandoschulz
+ *
+ */
 @Controller
-@RequestMapping("/chamada")
-public class ChamadaController {
+@RequestMapping("/usuario")
+public class UsuarioController {
 	
 	@Autowired
-	private ChamadaService chamadaservice;
+	private UsuarioService usuarioservice;
 	
 	Utils utils = new Utils();
 
+	/**
+	 * Metodo que tem como funcao listar Usuarios.
+	 * 
+	 * @return jsonUsuarios
+	 */
 	@RequestMapping(value = "/listar", method = RequestMethod.GET)
 	@ResponseBody
 	public String listar() {
 
-		List<Chamada> chamadas = chamadaservice.listarChamadas();
+		List<Usuario> usuarios = usuarioservice.listarUsuarios();
 
-		String jsonChamadas = utils.convertToJson(chamadas);
-		return jsonChamadas;
+		String jsonUsuarios = utils.convertToJson(usuarios);
+		return jsonUsuarios;
 	}
 }
