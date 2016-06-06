@@ -16,10 +16,10 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
  
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/css/**").addResourceLocations("/css/");
-		registry.addResourceHandler("/fonts/**").addResourceLocations("/fonts/");
-		registry.addResourceHandler("/img/**").addResourceLocations("/img/");
-		registry.addResourceHandler("/js/**").addResourceLocations("/js/");
+		registry.addResourceHandler("**/css/**").addResourceLocations("/css/");
+		registry.addResourceHandler("**/fonts/**").addResourceLocations("/fonts/");
+		registry.addResourceHandler("**/img/**").addResourceLocations("/img/");
+		registry.addResourceHandler("**/js/**").addResourceLocations("/js/");
 	}
 	
 	@Bean
@@ -27,8 +27,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		viewResolver.setViewClass(JstlView.class);
 		viewResolver.setPrefix("/WEB-INF/views/jsp/");
-		viewResolver.setSuffix(".jsp");
+		viewResolver.setSuffix(".html");
 		return viewResolver;
-	}
- 
+	} 
 }
