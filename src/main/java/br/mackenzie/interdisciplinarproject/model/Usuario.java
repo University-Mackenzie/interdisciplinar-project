@@ -22,9 +22,9 @@ public class Usuario {
 	private int tia;
 
 	@Column(name = "nome")
-	private int nome;
+	private String nome;
 	@Column(name = "email")
-	private int email;
+	private String email;
 	
 	/**
 	 * Construtor com seus parâmetros.
@@ -32,7 +32,7 @@ public class Usuario {
 	 * @param nome
 	 * @param email
 	 */
-	public Usuario(int tia, int nome, int email) {
+	public Usuario(int tia, String nome, String email) {
 		super();
 		this.tia = tia;
 		this.nome = nome;
@@ -55,16 +55,16 @@ public class Usuario {
 	public void setTia(int tia) {
 		this.tia = tia;
 	}
-	public int getNome() {
+	public String getNome() {
 		return nome;
 	}
-	public void setNome(int nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getEmail() {
+	public String getEmail() {
 		return email;
 	}
-	public void setEmail(int email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}	
 }
