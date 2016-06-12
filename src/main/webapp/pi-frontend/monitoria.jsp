@@ -98,10 +98,10 @@
 
 				<div class="col-md-4" ng-repeat="usuario in usuarios">
 					<div class="team text-center">
-						<div class="cover" style="background:url('img/team/topicos.jpg'); background-size:cover;">
+						<div class="cover" style="background:url('{{ usuario.img_path }}'); background-size:cover;">
 							<div class="overlay text-center">
-								<h3 class="white">$69.00</h3>
-								<h5 class="light light-white">1 - 5 sessions / month</h5>
+								<!-- <h3 class="white">$69.00</h3> -->
+								<!-- <h5 class="light light-white">1 - 5 sessions / month</h5> -->
 							</div>
 						</div>
 						<img ng-src="{{ usuario.img_perfil }}" alt="Team Image" class="avatar">

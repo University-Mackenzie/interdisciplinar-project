@@ -106,31 +106,31 @@
                         </div>
                     </form>
 
-					<div class="lista-usuarios" ng-controller="usuarios">
+					<div class="lista-usuarios" ng-controller="alunos">
                         <div class="row">
                             <form action="#" class="form-alunos" style="float: left;" >
                                 <div class="row">
                                     <h4 class="label-names">Nome do Aluno</h4>
                                     <h4 class="label-names">Status de Presença</h4>
                                     
-                                    <div class="form-group col-md-12" ng-repeat="usuario in usuarios">
+                                    <div class="form-group col-md-12" ng-repeat="aluno in alunos">
                                         <div class="wrap-alunos">
                                             <ul class="">
                                                 <li>
-                                                    <a class="item-aluno" href="#">{{usuario.nome}}</a>
+                                                    <a class="item-aluno" href="#">{{aluno.nome}}</a>
                                                 </li>
                                             </ul>
                                         </div><!-- .form-group .col-md-12 -->
 
                                         <div class="enwrap-radio-user line-1 col-md-4">
-                                            <div class="wrap-radio">
-                                                <input type="radio" name="radio" id="radio1" class="radio"/>
-                                                <label for="radio1">Sim</label>
-                                            </div>
+                                            <!-- <div class="wrap-radio">
+                                                <input type="radio" name="{{aluno.tia}}" id="{{aluno.tia}}" class="radio"/>
+                                                <label for="{{aluno.tia}}">Sim</label>
+                                            </div> -->
 
                                             <div class="wrap-radio">
-                                                <input type="radio" name="radio" id="radio2" class="radio"/>
-                                                <label for="radio2">Não</label>
+                                                <input type="radio" name="{{aluno.tia}}" id="{{aluno.tia}}" class="radio"/>
+                                                <label for="{{aluno.tia}}">Não</label>
                                             </div>
                                         </div>
                                     </div>

@@ -4,3 +4,10 @@ function usuarios($scope, $http) {
             $scope.usuarios = data;
         });
 }
+
+function alunos($scope, $http) {
+    $http.get('http://localhost:8080/interdisciplinar-project/aluno/listar').
+        success(function (data) {
+            $scope.alunos = data;
+        });
+}
