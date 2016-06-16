@@ -112,7 +112,7 @@
                                 <div class="row">
                                     <h4 class="label-names">Nome do Aluno</h4>
                                     <h4 class="label-names">Status de Presença</h4>
-                                    
+
                                     <div class="form-group col-md-12" ng-repeat="aluno in alunos">
                                         <div class="wrap-alunos">
                                             <ul class="">
