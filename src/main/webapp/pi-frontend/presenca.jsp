@@ -95,15 +95,15 @@
 
                     <form action="" class="form-check">
                             <h2 class="title-page">Presença Online</h2>
-                            <h2 class="title-page">Onde estamos?</h2>
-                        <div class="form-group form-group-1 col-md-5">
+                            <!-- <h2 class="title-page">Onde estamos?</h2> -->
+                        <!-- <div class="form-group form-group-1 col-md-5">
                             <input type="text" class="form-control" id="campo3" placeholder="Sala" required>
                         </div>
                         <div id="actions" class="row"style="float: left">
                             <div class="col-md-12">
                                 <button type="submit" class="btn btn-primary">Check-In</button>
                             </div>
-                        </div>
+                        </div> -->
                     </form>
 
 					<div class="lista-usuarios" ng-controller="alunos">
@@ -111,7 +111,7 @@
                             <form action="#" class="form-alunos" style="float: left;" >
                                 <div class="row">
                                     <h4 class="label-names">Nome do Aluno</h4>
-                                    <h4 class="label-names">Status de Presença</h4>
+                                    <h4 class="label-names label-presenca">Status de Presença</h4>
 
                                     <div class="form-group col-md-12" ng-repeat="aluno in alunos">
                                         <div class="wrap-alunos">
@@ -122,15 +122,19 @@
                                             </ul>
                                         </div><!-- .form-group .col-md-12 -->
 
-                                        <div class="enwrap-radio-user line-1 col-md-4">
+                                        <div class="enwrap-radio-user line-1 col-md-2">
                                             <!-- <div class="wrap-radio">
                                                 <input type="radio" name="{{aluno.tia}}" id="{{aluno.tia}}" class="radio"/>
                                                 <label for="{{aluno.tia}}">Sim</label>
-                                            </div> -->
+                                            </div>
 
                                             <div class="wrap-radio">
                                                 <input type="radio" name="{{aluno.tia}}" id="{{aluno.tia}}" class="radio"/>
                                                 <label for="{{aluno.tia}}">Não</label>
+                                            </div> -->
+                                            <div class="wrap-radio">
+                                                <input type="checkbox" name="{{aluno.tia}}" id="{{aluno.tia}}" class="radio"/>
+                                                <label for="{{aluno.tia}}">Presença</label>
                                             </div>
                                         </div>
                                     </div>

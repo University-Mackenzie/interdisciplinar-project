@@ -11,3 +11,7 @@ function alunos($scope, $http) {
             $scope.alunos = data;
         });
 }
+
+function function_name(argument) {
+	// body...
+}

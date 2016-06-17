@@ -1,8 +1,7 @@
 package br.mackenzie.interdisciplinarproject.service;
 
-import java.util.List;
-
-import br.mackenzie.interdisciplinarproject.model.Aluno;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public interface UploadService {
 	
@@ -10,5 +9,7 @@ public interface UploadService {
 	 * Retorna lista de Alunos
 	 * @return
 	 */
-	List<Aluno> listarAlunos();
+	//List<Aluno> listarAlunos();
+	public void processRequest();
+	public void FileUpload(HttpServletRequest request, HttpServletResponse response);
 }

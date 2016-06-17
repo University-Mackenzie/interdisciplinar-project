@@ -110,6 +110,11 @@
                                         <input type="password" class="form-control" id="campo3" placeholder="Ex.: Digite uma senha" required>
                                     </div>
 
+                                    <div class="form-group col-md-12">
+                                        <!--<label for="campo2">Campo Um</label>-->
+                                        <input type="file" class="form-control" id="campo4" placeholder="Ex.: Digite uma senha" valeu="teste" required>
+                                    </div>
+
                                     <div class="enwrap-radio-user line-1">
                                         <div class="wrap-radio">
                                             <input type="radio" name="radio" id="radio1" class="radio"/>
@@ -118,7 +123,7 @@
 
                                         <div class="wrap-radio">
                                             <input type="radio" name="radio" id="radio2" class="radio"/>
-                                            <label for="radio2">Professor</label>
+                                            <label for="radio2">Monitor</label>
                                         </div>
 
 

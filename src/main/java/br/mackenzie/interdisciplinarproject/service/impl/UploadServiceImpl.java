@@ -25,13 +25,13 @@ public class UploadServiceImpl extends HttpServlet {
 
 		try {
 
-			this.upload(request, response);
+			this.FileUpload(request, response);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 	}
 
-	private String upload(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	private String FileUpload(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		DiskFileItemFactory factory = new DiskFileItemFactory();
 		ServletFileUpload upload = new ServletFileUpload(factory);
 		upload.setSizeMax(50 * 1024 * 1024);
@@ -46,13 +46,13 @@ public class UploadServiceImpl extends HttpServlet {
 			if (item.getFieldName().equals("arquivo")) {
 				nome = item.getName();
 				StringBuffer bn = new StringBuffer();
-				bn.append("D:/imagens/"); // caminho
+				bn.append("/uploads/monitores/"); // caminho
 				bn.append(nome);
 				File uploadedFile = new File(bn.toString());
 				item.write(uploadedFile);
 			}
 		}
-		nome = "D:/imagens/" + nome;
+		nome = "/uploads/monitores/" + nome;
 		return nome;
 	}
 }
