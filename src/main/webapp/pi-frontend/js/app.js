@@ -12,6 +12,29 @@ function alunos($scope, $http) {
         });
 }
 
-function function_name(argument) {
-	// body...
+function incluirComponente() {
+    var id = jQuery("#id").val();
+    var nome = jQuery("#nome").val();
+    var descricao = jQuery("#descricao").val();
+    var img_path = jQuery("#img_path").val();
+    var form = {
+        id: id,
+        nome: nome,
+        descricao: descricao,
+        img_path: img_path
+    }
+
+    var idCliente = $("#idUser").val();
+    var json = JSON.stringify(form);
+
+    jQuery.ajax({
+        type: "POST",
+        url: "/componente/incluirNovoComponente/" + tia,
+        data: json,
+        contentType: "application/json;charset=utf-8",
+        success: function (cliente) {
+
+        	//Inserir ação após inclusao
+        }
+    });
 }
