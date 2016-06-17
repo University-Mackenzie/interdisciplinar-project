@@ -78,7 +78,8 @@
 	                <li><a href="/pi-frontend/index.jsp?#services">Servicos</a></li>
 	                <li><a href="/pi-frontend/monitoria.jsp">Monitoria</a></li>
 	                <li class="item-menu item-menu-presenca"><a href="/pi-frontend/presenca.jsp">Presença</a></li>
-	                <li class="item-menu item-menu-modal"><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Entrar</a></li>
+	                <li class="item-menu item-menu-presenca"><a href="/pi-frontend/cadastros.jsp">Cadastros</a></li>
+	                <!-- <li class="item-menu item-menu-modal"><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Entrar</a></li> -->
 	            </ul>
 	        </div>
 	        <!-- /.navbar-collapse -->
@@ -92,19 +93,27 @@
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12 text-center">
-                            <h2 class="title-page">Cadastro de Aluno</h2>
+                            <h2 class="title-page">Cadastros</h2>
                             <form action="index.html">
                                 <div class="row">
                                     <div class="form-group col-md-4">
                                         <!--<label for="campo1">Componente</label>-->
-                                        <input type="text" class="form-control" id="campo1" placeholder="Ex.: Nome Commpleto" required>
+                                        <!-- <input type="text" class="form-control" id="campo1" placeholder="Ex.: Nome Commpleto" required> -->
+                                    	<a class="btn btn-primary" href="/pi-frontend/cadastrar-aluno.jsp">Alunos</a>
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <!--<label for="campo2">Campo Um</label>-->
-                                        <input type="text" class="form-control" id="campo2" placeholder="Ex.: E-mail" required>
+                                        <!-- <input type="text" class="form-control" id="campo2" placeholder="Ex.: E-mail" required> -->
+                                    	<a class="btn btn-primary" href="/pi-frontend/cadastrar-aluno.jsp">Monitores</a>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Salvar</button>
+
+                                    <div class="form-group col-md-4">
+                                        <!--<label for="campo2">Campo Um</label>-->
+                                        <!-- <input type="text" class="form-control" id="campo2" placeholder="Ex.: E-mail" required> -->
+                                    	<a class="btn btn-primary" href="/pi-frontend/cadastrar-aluno.jsp">Componentes</a>
+                                    </div>
+
                                 </div>
                             </form>
 						</div>
