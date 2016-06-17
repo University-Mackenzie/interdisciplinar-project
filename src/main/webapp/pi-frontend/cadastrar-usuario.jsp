@@ -92,7 +92,7 @@
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12 text-center">
-                            <h2 class="title-page">Cadastro</h2>
+                            <h2 class="title-page">Cadastrar Monitor</h2>
                             <form action="index.html">
                                 <div class="row">
                                     <div class="form-group col-md-4">
@@ -104,6 +104,28 @@
                                         <!--<label for="campo2">Campo Um</label>-->
                                         <input type="text" class="form-control" id="campo2" placeholder="Ex.: E-mail" required>
                                     </div>
+
+                                    <div class="form-group col-md-4">
+                                        <!--<label for="campo2">Campo Um</label>-->
+                                        <input type="password" class="form-control" id="campo3" placeholder="Ex.: Digite uma senha" required>
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                        <!--<label for="campo2">Campo Um</label>-->
+                                        <input type="file" class="form-control" id="campo4" placeholder="Ex.: Digite uma senha" valeu="teste" required>
+                                    </div>
+
+                                    <div class="enwrap-radio-user line-1">
+                                        <div class="wrap-radio">
+                                            <input type="radio" name="radio" id="radio1" class="radio"/>
+                                            <label for="radio1">Aluno</label>
+                                        </div>
+
+                                        <div class="wrap-radio">
+                                            <input type="radio" name="radio" id="radio2" class="radio"/>
+                                            <label for="radio2">Professor</label>
+                                        </div>
+                                    </div>
                                     <button type="submit" class="btn btn-primary">Salvar</button>
                                 </div>
                             </form>
@@ -114,7 +136,7 @@
 		</div>
 	</header>
 
-	<section class="section section-padded blue-bg">
+	<!-- <section class="section section-padded blue-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
@@ -138,7 +160,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -172,9 +194,42 @@
 		</div>
 	</div>
 
-	<!-- EMBED FOOTER -->
-	<div id="footer"></div>
-	<!-- EMBED FOOTER -->
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center-mobile">
+                    <h3 class="white">Easy Mack</h3>
+                    <h5 class="light regular light-white">Sistema direcionado para os alunos e professores.</h5>
+                    <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue ripple trial-button">Entrar</a>
+                </div>
+                <div class="col-sm-6 text-center-mobile">
+                    <h3 class="white">Horários <span class="open-blink"></span></h3>
+                    <div class="row opening-hours">
+                        <div class="col-sm-6 text-center-mobile">
+                            <h5 class="light-white light">Seg - Sex</h5>
+                            <h3 class="regular white">8:00 - 23:00</h3>
+                        </div>
+                        <div class="col-sm-6 text-center-mobile">
+                            <h5 class="light-white light">Sab</h5>
+                            <h3 class="regular white">8:00 - 14:00</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-footer text-center-mobile">
+                <div class="col-sm-8">
+                    <p>&copy; 2015 Todos os direitos Reservados. Desenvolvido por alunos do Componente: Projeto Interdisciplinar(Prof. Dirceu). Universidade Presbiteria <a href="http://mackenzie.com.br">Mackenzie</a></p>
+                </div>
+                <div class="col-sm-4 text-right text-center-mobile">
+                    <ul class="social-footer">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 	<!-- Holder for mobile navigation -->
 	<div class="mobile-nav">

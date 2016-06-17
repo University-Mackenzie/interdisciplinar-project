@@ -19,7 +19,7 @@ function alunos($scope, $http) {
 }
 
 /**
- * Funcao para incluir novos Monitores.
+ * Funcao para incluir novos Componentes.
  */
 function incluirComponente() {
     var id = jQuery("#id").val();
@@ -43,10 +43,43 @@ function incluirComponente() {
         contentType: "application/json;charset=utf-8",
         success: function (cliente) {
 
+            //Inserir ação após inclusao
+        }
+    });
+}
+
+/**
+ * Funcao para incluir novos Monitores.
+ */
+function incluirUsuario() {
+    var id = jQuery("#idUser").val();
+    var nome = jQuery("#nome").val();
+    var email = jQuery("#email").val();
+    var img_perfil = jQuery("#img_perfil").val();
+    var tipo_monitor = jQuery("#tipo_monitor").val();
+    var form = {
+        tia: tia,
+        nome: nome,
+        email: email,
+        img_perfil: img_perfil,
+        tipo_monitor: tipo_monitor
+    }
+
+    var idUsuario = $("#tia").val();
+    var json = JSON.stringify(form);
+
+    jQuery.ajax({
+        type: "POST",
+        url: "/usuario/incluirNovoUsuario/" + tia,
+        data: json,
+        contentType: "application/json;charset=utf-8",
+        success: function (usuario) {
+
         	//Inserir ação após inclusao
         }
     });
 }
+
 /**
  * Funcao para incluir novos Alunos.
  */

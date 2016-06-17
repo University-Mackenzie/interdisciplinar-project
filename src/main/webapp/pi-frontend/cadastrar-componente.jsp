@@ -4,7 +4,7 @@
 <html lang="pt-br" ng-app>
 
 <head>
-	<title>Projeto Interdisciplinar - Cadastrar Monitor</title>
+	<title>Projeto Interdisciplinar - Cadastrar Componente</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,7 +93,7 @@
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12 text-center">
-                            <h2 class="title-page">Cadastrar Monitor</h2>
+                            <h2 class="title-page">Cadastrar Componente</h2>
                             <form action="index.html">
                                 <div class="row">
                                     <div class="form-group col-md-3">
@@ -114,6 +114,11 @@
                                     <div class="form-group col-md-3">
                                         <!--<label for="campo3">Campo Três</label>-->
                                         <input type="text" class="form-control" id="campo4" placeholder="Ex.:Quando?" required>
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                        <!--<label for="campo2">Campo Um</label>-->
+                                        <input type="file" class="form-control" id="campo4" placeholder="Ex.: Digite uma senha" valeu="teste" required>
                                     </div>
                                 </div>
 

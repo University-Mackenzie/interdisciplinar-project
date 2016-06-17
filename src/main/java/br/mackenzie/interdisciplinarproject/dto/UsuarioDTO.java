@@ -1,12 +1,25 @@
 package br.mackenzie.interdisciplinarproject.dto;
 
+/**
+ * 
+ * @author jonyfernandoschulz
+ *
+ */
 public class UsuarioDTO {
 	
+	/**
+	 * 
+	 */
 	private String nome;
 	private String email;
 	private String tipo_monitor;
 	private String img_perfil;
 	private int tia;
+	
+	/**
+	 * 
+	 * @return
+	 */
 	public String getNome() {
 		return nome;
 	}
