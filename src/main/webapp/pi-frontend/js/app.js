@@ -12,46 +12,31 @@ function alunos($scope, $http) {
         });
 }
 
+
 function incluirComponente() {
-    var logradouro = jQuery("#id").val();
-    var numero = jQuery("#nome").val();
-    var complemento = jQuery("#descricao").val();
-    var cep = jQuery("#img_path").val();
+    var id = jQuery("#id").val();
+    var nome = jQuery("#nome").val();
+    var descricao = jQuery("#descricao").val();
+    var img_path = jQuery("#img_path").val();
     var form = {
-        logradouro: logradouro,
-        numero: numero,
-        complemento: complemento,
-        cep: cep
+        id: id,
+        nome: nome,
+        descricao: descricao,
+        img_path: img_path
     }
 
-    var idCliente = $("#idCliente").val();
+    var idCliente = $("#idUser").val();
     var json = JSON.stringify(form);
 
     jQuery.ajax({
         type: "POST",
-        url: "/loja/clientes/incluirNovoEndereco/" + idCliente + ".html",
+        url: "/componente/incluirNovoComponente/" + tia,
         data: json,
         contentType: "application/json;charset=utf-8",
         success: function (cliente) {
-            jQuery.ajax({
-                type: "POST",
-                url: "/loja/pedidos/selecionarDadosEntrega/" + cliente.id + "/" + cliente.enderecos[0].idEndereco + ".html",
-                success: function () {
-                    jQuery.ajax({
-                        type: "POST",
-                        url: "/loja/pedidos/selecionarPagamento/1.html",
-                        success: function () {
-                            jQuery.ajax({
-                                type: "POST",
-                                url: "/loja/pedidos/concluirPedido.html",
-                                success: function (codigoPedido) {
-                                    window.location.href = "/loja/pedidos/gerarBoleto/" + codigoPedido + ".html";
-                                }
-                            });
-                        }
-                    });
-                }
-            });
+
+        	//Inserir ação após inclusao
         }
     });
 }
+    
