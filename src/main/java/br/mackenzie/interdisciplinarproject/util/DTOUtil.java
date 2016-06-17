@@ -1,14 +1,14 @@
 package br.mackenzie.interdisciplinarproject.util;
 
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.BeanWrapper;
-import org.springframework.beans.BeanWrapperImpl;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.BeanWrapperImpl;
 
 /**
  * @author jonyfernandoschulz
@@ -70,7 +70,6 @@ public final class DTOUtil {
                 }
             }
         }
-
     }
 
     public static <T> Iterable<String> obterNomesAtributos(Class<T> clazz) {
@@ -81,5 +80,4 @@ public final class DTOUtil {
         }
         return fieldNames;
     }
-
 }

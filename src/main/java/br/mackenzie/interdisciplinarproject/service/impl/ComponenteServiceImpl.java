@@ -13,6 +13,11 @@ import br.mackenzie.interdisciplinarproject.model.Usuario;
 import br.mackenzie.interdisciplinarproject.service.ComponenteService;
 import br.mackenzie.interdisciplinarproject.util.DTOUtil;
 
+/**
+ * 
+ * @author jonyfernandoschulz
+ *
+ */
 @Service
 @Transactional
 public class ComponenteServiceImpl implements ComponenteService {
@@ -31,6 +36,5 @@ public class ComponenteServiceImpl implements ComponenteService {
 		Componente componente = new Componente();
 		DTOUtil.copiarPropriedades(componente, componenteDTO, DTOUtil.obterNomesAtributos(ComponenteDTO.class));
 		componenteDAO.incluir(componente);
-
 	}
 }

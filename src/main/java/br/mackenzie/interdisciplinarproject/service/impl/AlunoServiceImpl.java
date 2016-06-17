@@ -7,9 +7,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.mackenzie.interdisciplinarproject.dao.AlunoDAO;
+import br.mackenzie.interdisciplinarproject.dto.AlunoDTO;
 import br.mackenzie.interdisciplinarproject.model.Aluno;
 import br.mackenzie.interdisciplinarproject.service.AlunoService;
+import br.mackenzie.interdisciplinarproject.util.DTOUtil;
 
+/**
+ * 
+ * @author jonyfernandoschulz
+ *
+ */
 @Service
 @Transactional
 public class AlunoServiceImpl implements AlunoService{
@@ -20,5 +27,13 @@ public class AlunoServiceImpl implements AlunoService{
 	@Override
 	public List<Aluno> listarAlunos() {
 		return alunoDAO.listar();
+	}
+	
+	@Override
+	public void inserirAluno(Aluno usuario, AlunoDTO alunoDTO) {
+
+		Aluno aluno = new Aluno();
+		DTOUtil.copiarPropriedades(aluno, alunoDTO, DTOUtil.obterNomesAtributos(AlunoDTO.class));
+		alunoDAO.incluir(aluno);
 	}
 }

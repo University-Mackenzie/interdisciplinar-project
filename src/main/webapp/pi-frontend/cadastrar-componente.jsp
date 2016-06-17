@@ -4,7 +4,7 @@
 <html lang="pt-br" ng-app>
 
 <head>
-	<title>Projeto Interdisciplinar - Home</title>
+	<title>Projeto Interdisciplinar - Cadastrar Monitor</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,7 +93,7 @@
 				<div class="header-text">
 					<div class="row">
 						<div class="col-md-12 text-center">
-                            <h2 class="title-page">Olá Professor/Aluno Jony, tudo bem?</h2>
+                            <h2 class="title-page">Cadastrar Monitor</h2>
                             <form action="index.html">
                                 <div class="row">
                                     <div class="form-group col-md-3">

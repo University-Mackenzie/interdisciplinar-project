@@ -2,8 +2,14 @@ package br.mackenzie.interdisciplinarproject.service;
 
 import java.util.List;
 
+import br.mackenzie.interdisciplinarproject.dto.AlunoDTO;
 import br.mackenzie.interdisciplinarproject.model.Aluno;
 
+/**
+ * 
+ * @author jonyfernandoschulz
+ *
+ */
 public interface AlunoService {
 	
 	/**
@@ -11,4 +17,11 @@ public interface AlunoService {
 	 * @return
 	 */
 	List<Aluno> listarAlunos();
+	
+	/**
+	 * Inserir Aluno
+	 * 
+	 * @param componenteDTO
+	 */
+	public void inserirAluno(Aluno aluno,AlunoDTO alunoDTO);
 }

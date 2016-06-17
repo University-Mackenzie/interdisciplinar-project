@@ -3,7 +3,7 @@
 <html lang="pt-br" ng-app>
 
 <head>
-	<title>Projeto Interdisciplinar - Home</title>
+	<title>Projeto Interdisciplinar - Cadastrar Monitor</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -104,58 +104,6 @@
                                         <!--<label for="campo2">Campo Um</label>-->
                                         <input type="text" class="form-control" id="campo2" placeholder="Ex.: E-mail" required>
                                     </div>
-
-                                    <div class="form-group col-md-4">
-                                        <!--<label for="campo2">Campo Um</label>-->
-                                        <input type="password" class="form-control" id="campo3" placeholder="Ex.: Digite uma senha" required>
-                                    </div>
-
-                                    <div class="form-group col-md-12">
-                                        <!--<label for="campo2">Campo Um</label>-->
-                                        <input type="file" class="form-control" id="campo4" placeholder="Ex.: Digite uma senha" valeu="teste" required>
-                                    </div>
-
-                                    <div class="enwrap-radio-user line-1">
-                                        <div class="wrap-radio">
-                                            <input type="radio" name="radio" id="radio1" class="radio"/>
-                                            <label for="radio1">Aluno</label>
-                                        </div>
-
-                                        <div class="wrap-radio">
-                                            <input type="radio" name="radio" id="radio2" class="radio"/>
-                                            <label for="radio2">Monitor</label>
-                                        </div>
-
-
-                                    </div>
-
-                                    <!--<h4 class="title-page subtitle-page">Áreas de atuação</h4>-->
-                                    <!--<div class="enwrap-radio-user">-->
-                                        <!--<div class="wrap-radio">-->
-                                            <!--<input type="radio" name="radio1" id="radio3" class="radio"/>-->
-                                            <!--<label for="radio3">Redes</label>-->
-                                        <!--</div>-->
-
-                                        <!--<div class="wrap-radio">-->
-                                            <!--<input type="radio" name="radio1" id="radio4" class="radio"/>-->
-                                            <!--<label for="radio4">Grafos</label>-->
-                                        <!--</div>-->
-
-                                        <!--<div class="wrap-radio">-->
-                                            <!--<input type="radio" name="radio1" id="radio5" class="radio"/>-->
-                                            <!--<label for="radio5">IHC</label>-->
-                                        <!--</div>-->
-
-                                        <!--<div class="wrap-radio">-->
-                                            <!--<input type="radio" name="radio1" id="radio6" class="radio"/>-->
-                                            <!--<label for="radio6">PO</label>-->
-                                        <!--</div>-->
-
-                                        <!--<div class="wrap-radio">-->
-                                            <!--<input type="radio" name="radio1" id="radio7" class="radio"/>-->
-                                            <!--<label for="radio7">Mobile</label>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
                                     <button type="submit" class="btn btn-primary">Salvar</button>
                                 </div>
                             </form>

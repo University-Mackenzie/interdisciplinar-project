@@ -56,7 +56,5 @@ public class ComponenteController {
     	Usuario usuario = new Usuario();
     	usuario.setTia(tia);
     	componenteservice.inserirComponente(usuario,componenteDTO);
-    	
-		
 	}
 }
