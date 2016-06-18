@@ -30,10 +30,11 @@ public class AlunoServiceImpl implements AlunoService{
 	}
 	
 	@Override
-	public void inserirAluno(Aluno usuario, AlunoDTO alunoDTO) {
-
+	public void inserirAluno(AlunoDTO alunoDTO) {
 		Aluno aluno = new Aluno();
-		DTOUtil.copiarPropriedades(aluno, alunoDTO, DTOUtil.obterNomesAtributos(AlunoDTO.class));
+		//DTOUtil.copiarPropriedades(aluno, alunoDTO, DTOUtil.obterNomesAtributos(AlunoDTO.class));
+		aluno.setEmail(alunoDTO.getEmail());
+		aluno.setNome(alunoDTO.getNome());
 		alunoDAO.incluir(aluno);
 	}
 }

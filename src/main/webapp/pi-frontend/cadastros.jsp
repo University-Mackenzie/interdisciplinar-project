@@ -105,13 +105,13 @@
                                     <div class="form-group col-md-4">
                                         <!--<label for="campo2">Campo Um</label>-->
                                         <!-- <input type="text" class="form-control" id="campo2" placeholder="Ex.: E-mail" required> -->
-                                    	<a class="btn btn-primary" href="/pi-frontend/cadastrar-aluno.jsp">Monitores</a>
+                                    	<a class="btn btn-primary" href="/pi-frontend/cadastrar-usuario.jsp">Monitores</a>
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <!--<label for="campo2">Campo Um</label>-->
                                         <!-- <input type="text" class="form-control" id="campo2" placeholder="Ex.: E-mail" required> -->
-                                    	<a class="btn btn-primary" href="/pi-frontend/cadastrar-aluno.jsp">Componentes</a>
+                                    	<a class="btn btn-primary" href="/pi-frontend/cadastrar-componente.jsp">Componentes</a>
                                     </div>
 
                                 </div>

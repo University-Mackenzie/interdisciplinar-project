@@ -47,13 +47,11 @@ public class AlunoController {
 		return jsonAlunos;
 	}
 	
-    @RequestMapping(value = "/incluirNovoAluno/{tia}", method = RequestMethod.POST,
+    @RequestMapping(value = "/incluirNovoAluno", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-	public void inserirAluno(@PathVariable(value = "tia") int tia, @RequestBody AlunoDTO alunoDTO){
-    	Aluno aluno = new Aluno();
-    	aluno.setTia(tia);
-    	alunoservice.inserirAluno(aluno,alunoDTO);
+	public void inserirAluno(@RequestBody AlunoDTO alunoDTO){
+    	alunoservice.inserirAluno(alunoDTO);
 	}
 }

@@ -2,6 +2,7 @@ package br.mackenzie.interdisciplinarproject.service;
 
 import java.util.List;
 
+import br.mackenzie.interdisciplinarproject.dto.AlunoDTO;
 import br.mackenzie.interdisciplinarproject.dto.UsuarioDTO;
 import br.mackenzie.interdisciplinarproject.model.Usuario;
 
@@ -14,9 +15,9 @@ public interface UsuarioService {
 	List<Usuario> listarUsuarios();
 	
 	/**
-	 * Inserir Usuario.
+	 * Inserir Aluno
 	 * 
 	 * @param usuarioDTO
 	 */
-	public void inserirUsuario(Usuario usuario,UsuarioDTO usuarioDTO);
+	public void inserirUsuario(UsuarioDTO usuarioDTO);
 }

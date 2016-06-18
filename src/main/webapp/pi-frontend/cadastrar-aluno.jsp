@@ -94,18 +94,18 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
                             <h2 class="title-page">Cadastro de Aluno</h2>
-                            <form action="index.html">
+                            <form method="post">
                                 <div class="row">
                                     <div class="form-group col-md-4">
                                         <!--<label for="campo1">Componente</label>-->
-                                        <input type="text" class="form-control" id="campo1" placeholder="Ex.: Nome Commpleto" required>
+                                        <input type="text" class="form-control" id="nome" placeholder="Ex.: Nome Commpleto" required>
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <!--<label for="campo2">Campo Um</label>-->
-                                        <input type="text" class="form-control" id="campo2" placeholder="Ex.: E-mail" required>
+                                        <input type="text" class="form-control" id="email" placeholder="Ex.: E-mail" required>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Salvar</button>
+                                    <button type="submit" class="btn btn-primary" onclick="incluirAluno()">Salvar</button>
                                 </div>
                             </form>
 						</div>

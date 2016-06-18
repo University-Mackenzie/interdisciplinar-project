@@ -48,7 +48,7 @@ public class ComponenteController {
 		return jsonComponentes;
 	}
 	
-    @RequestMapping(value = "/incluirNovoComponente/{tia}", method = RequestMethod.POST,
+    @RequestMapping(value = "/incluirNovoComponente", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody

@@ -38,7 +38,7 @@ function incluirComponente() {
 
     jQuery.ajax({
         type: "POST",
-        url: "/componente/incluirNovoComponente/" + tia,
+        url: "http://localhost:8080/componente/incluirNovoComponente/" + tia,
         data: json,
         contentType: "application/json;charset=utf-8",
         success: function (cliente) {
@@ -52,30 +52,29 @@ function incluirComponente() {
  * Funcao para incluir novos Monitores.
  */
 function incluirUsuario() {
-    var id = jQuery("#idUser").val();
+    // var id = jQuery("#idUser").val();
     var nome = jQuery("#nome").val();
     var email = jQuery("#email").val();
     var img_perfil = jQuery("#img_perfil").val();
-    var tipo_monitor = jQuery("#tipo_monitor").val();
+    var tipo_monitor = jQuery(".tipo_monitor").val();
     var form = {
-        tia: tia,
         nome: nome,
         email: email,
         img_perfil: img_perfil,
         tipo_monitor: tipo_monitor
     }
 
-    var idUsuario = $("#tia").val();
+    // var idUsuario = $("#tia").val();
     var json = JSON.stringify(form);
 
     jQuery.ajax({
         type: "POST",
-        url: "/usuario/incluirNovoUsuario/" + tia,
+        url: "http://localhost:8080/interdisciplinar-project/usuario/incluirNovoUsuario",
         data: json,
         contentType: "application/json;charset=utf-8",
-        success: function (usuario) {
+        success: function (nome) {
 
-        	//Inserir ação após inclusao
+        	alert("Gravado com Sucesso!");
         }
     });
 }
@@ -84,26 +83,24 @@ function incluirUsuario() {
  * Funcao para incluir novos Alunos.
  */
 function incluirAluno() {
-    var id = jQuery("#id").val();
+
     var nome = jQuery("#nome").val();
-    var tia = jQuery("#tia").val();
+    var email = jQuery("#email").val();
     var form = {
-        id: id,
         nome: nome,
-        tia: tia
+        email: email
     }
 
-    var idAluno = $("#idAluno").val();
     var json = JSON.stringify(form);
 
     jQuery.ajax({
         type: "POST",
-        url: "/aluno/incluirNovoAluno/" + tia,
+        url: "http://localhost:8080/interdisciplinar-project/aluno/incluirNovoAluno",
         data: json,
         contentType: "application/json;charset=utf-8",
-        success: function (aluno) {
+        success: function (nome) {
 
-        	//Inserir ação após inclusao
+        	alert("success");
         }
     });
 }

@@ -94,40 +94,40 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
                             <h2 class="title-page">Cadastrar Monitor</h2>
-                            <form action="index.html">
+                            <form method="post">
                                 <div class="row">
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group col-md-6">
                                         <!--<label for="campo1">Componente</label>-->
-                                        <input type="text" class="form-control" id="campo1" placeholder="Ex.: Nome Commpleto" required>
+                                        <input type="text" class="form-control" id="nome" placeholder="Ex.: Nome Commpleto" required>
                                     </div>
 
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group col-md-6">
                                         <!--<label for="campo2">Campo Um</label>-->
-                                        <input type="text" class="form-control" id="campo2" placeholder="Ex.: E-mail" required>
+                                        <input type="text" class="form-control" id="email" placeholder="Ex.: E-mail" required>
                                     </div>
 
-                                    <div class="form-group col-md-4">
-                                        <!--<label for="campo2">Campo Um</label>-->
+<!--                                     <div class="form-group col-md-4">
+                                        <label for="campo2">Campo Um</label>
                                         <input type="password" class="form-control" id="campo3" placeholder="Ex.: Digite uma senha" required>
                                     </div>
-
+ -->
                                     <div class="form-group col-md-12">
                                         <!--<label for="campo2">Campo Um</label>-->
-                                        <input type="file" class="form-control" id="campo4" placeholder="Ex.: Digite uma senha" valeu="teste" required>
+                                        <input type="file" class="form-control" id="img_perfil" valeu="teste" required>
                                     </div>
 
                                     <div class="enwrap-radio-user line-1">
                                         <div class="wrap-radio">
-                                            <input type="radio" name="radio" id="radio1" class="radio"/>
+                                            <input type="radio" name="radio" id="radio1" class="radio tipo_monitor"/>
                                             <label for="radio1">Aluno</label>
                                         </div>
 
                                         <div class="wrap-radio">
-                                            <input type="radio" name="radio" id="radio2" class="radio"/>
+                                            <input type="radio" name="radio" id="radio2" class="radio tipo_monitor"/>
                                             <label for="radio2">Professor</label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Salvar</button>
+                                    <button type="submit" class="btn btn-primary" onclick="incluirUsuario()">Salvar</button>
                                 </div>
                             </form>
 						</div>

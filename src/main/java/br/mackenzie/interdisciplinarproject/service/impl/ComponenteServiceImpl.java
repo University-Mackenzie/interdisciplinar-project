@@ -32,9 +32,10 @@ public class ComponenteServiceImpl implements ComponenteService {
 
 	@Override
 	public void inserirComponente(Usuario usuario, ComponenteDTO componenteDTO) {
-
 		Componente componente = new Componente();
-		DTOUtil.copiarPropriedades(componente, componenteDTO, DTOUtil.obterNomesAtributos(ComponenteDTO.class));
+		//DTOUtil.copiarPropriedades(componente, componenteDTO, DTOUtil.obterNomesAtributos(ComponenteDTO.class));
+		componente.setNome(componenteDTO.getNome());
+		componente.setImg_path(componenteDTO.getImg_path());
 		componenteDAO.incluir(componente);
 	}
 }

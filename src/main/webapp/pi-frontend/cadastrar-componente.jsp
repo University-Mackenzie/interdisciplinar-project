@@ -95,16 +95,16 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
                             <h2 class="title-page">Cadastrar Componente</h2>
-                            <form action="index.html">
+                            <form method="post">
                                 <div class="row">
                                     <div class="form-group col-md-3">
                                         <!--<label for="campo1">Componente</label>-->
-                                        <input type="text" class="form-control" id="campo1" placeholder="Ex.:Nome do Componente" required>
+                                        <input type="text" class="form-control" id="nome" placeholder="Ex.:Nome do Componente" required>
                                     </div>
 
                                     <div class="form-group col-md-3">
                                         <!--<label for="campo2">Campo Um</label>-->
-                                        <input type="text" class="form-control" id="campo2" placeholder="Ex.:Descrição" required>
+                                        <input type="text" class="form-control" id="descrisao" placeholder="Ex.:Descrição" required>
                                     </div>
 
                                     <div class="form-group col-md-3">
@@ -114,12 +114,12 @@
 
                                     <div class="form-group col-md-3">
                                         <!--<label for="campo3">Campo Três</label>-->
-                                        <input type="text" class="form-control" id="campo4" placeholder="Ex.:Quando?" required>
+                                        <input type="text" class="form-control" id="datepicker" placeholder="Ex.:Quando?" required>
                                     </div>
 
                                     <div class="form-group col-md-12">
                                         <!--<label for="campo2">Campo Um</label>-->
-                                        <input type="file" class="form-control" id="campo4" placeholder="Ex.: Digite uma senha" valeu="teste" required>
+                                        <input type="file" class="form-control" id="img_path" placeholder="Ex.: Digite uma senha" valeu="teste" required>
                                     </div>
                                 </div>
 
@@ -133,8 +133,8 @@
 
                                 <div id="actions" class="row">
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                        <button type="submit" class="btn btn-primary">Limpar</button>
+                                        <button type="submit" class="btn btn-primary" onclick="incluirComponente()">Cadastrar</button>
+                                        <button type="reset" class="btn btn-primary">Limpar</button>
                                         <!--<a href="index.html" class="btn btn-default">Cancelar</a>-->
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@
 		</div>
 	</header>
 
-	<section class="section section-padded blue-bg">
+	<!-- <section class="section section-padded blue-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
@@ -170,7 +170,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -257,6 +257,19 @@
 	<script src="js/jquery.onepagenav.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/scripts.js"></script>
+
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	<script>
+		$(function() {
+			$( "#datepicker" ).datepicker();
+			$( "#anim" ).change(function() {
+			$( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+			});
+		});
+	</script>
 </body>
 
 </html>

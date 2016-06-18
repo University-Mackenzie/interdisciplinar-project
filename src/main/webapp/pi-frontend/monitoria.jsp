@@ -80,7 +80,8 @@
 	                <li><a href="/pi-frontend/index.jsp?#services">Servicos</a></li>
 	                <li><a href="/pi-frontend/monitoria.jsp">Monitoria</a></li>
 	                <li class="item-menu item-menu-presenca"><a href="/pi-frontend/presenca.jsp">Presença</a></li>
-	                <li class="item-menu item-menu-modal"><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Entrar</a></li>
+	                <li class="item-menu item-menu-presenca"><a href="/pi-frontend/cadastros.jsp">Cadastros</a></li>
+	                <!-- <li class="item-menu item-menu-modal"><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Entrar</a></li> -->
 	            </ul>
 	        </div>
 	        <!-- /.navbar-collapse -->
@@ -107,16 +108,16 @@
 						<img ng-src="{{ usuario.img_perfil }}" alt="Team Image" class="avatar">
 						<div class="title">
 							<h4>{{ usuario.nome }}</h4>
-							<h5 class="muted regular">{{ usuario.componente.nome }}Tópicos em Banco</h5>
+							<h5 class="muted regular">{{ componente.nome }}</h5>
 						</div>
-						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Reservar Monitoria</a>
+						<!-- <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Reservar Monitoria</a> -->
 						<!-- <button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Reservar Monitoria</button> -->
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
+
 	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content modal-popup">

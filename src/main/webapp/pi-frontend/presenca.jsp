@@ -80,7 +80,8 @@
                     <li><a href="/pi-frontend/index.jsp?#services">Servicos</a></li>
                     <li><a href="/pi-frontend/monitoria.jsp">Monitoria</a></li>
                     <li class="item-menu item-menu-presenca"><a href="/pi-frontend/presenca.jsp">Presença</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Entrar</a></li>
+                    <li class="item-menu item-menu-presenca"><a href="/pi-frontend/cadastros.jsp">Cadastros</a></li>
+                    <!-- <li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Entrar</a></li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

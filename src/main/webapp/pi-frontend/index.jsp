@@ -79,6 +79,7 @@
 	                <li><a href="#services">Servicos</a></li>
 	                <li><a href="/pi-frontend/monitoria.jsp">Monitoria</a></li>
 	                <li class="item-menu item-menu-presenca"><a href="/pi-frontend/presenca.jsp">Presença</a></li>
+	                <li class="item-menu item-menu-presenca"><a href="/pi-frontend/cadastros.jsp">Cadastros</a></li>
 	                <li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Entrar</a></li>
 	            </ul>
 	        </div>
@@ -102,7 +103,7 @@
 			</div>
 		</div>
 	</header>
-	
+
 	<section>
 		<div class="cut cut-top"></div>
 		<div class="container">
@@ -129,7 +130,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section id="services" class="section section-padded">
 		<div class="container">
 			<div class="row text-center title">
@@ -159,7 +160,7 @@
 		</div>
 		<div class="cut cut-bottom"></div>
 	</section>
-	
+
 	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content modal-popup">

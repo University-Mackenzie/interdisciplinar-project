@@ -23,5 +23,5 @@ public interface AlunoService {
 	 * 
 	 * @param alunoDTO
 	 */
-	public void inserirAluno(Aluno aluno,AlunoDTO alunoDTO);
+	public void inserirAluno(AlunoDTO alunoDTO);
 }
