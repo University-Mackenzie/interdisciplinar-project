@@ -142,9 +142,9 @@
 
                                 </div><!-- .row -->
 
-                                <div class="row">
+                                <!-- <div class="row">
                                     <textarea name="" id="conteudo-aula" class="col-md-12" placeholder="Conteúdo tratado em aula hoje. Descreva aqui."></textarea>
-                                </div>
+                                </div> -->
                                 <div id="actions-2" class="row"style="float: left">
                                     <div class="col-md-12">
                                         <button type="submit" class="btn btn-primary">Enviar</button>
