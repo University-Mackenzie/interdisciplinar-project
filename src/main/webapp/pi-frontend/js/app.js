@@ -80,10 +80,70 @@ function incluirUsuario() {
 }
 
 /**
- * Funcao para incluir novos Alunos.
+ * FUNÇOES CLASS ALUNOS
+ * Funcao para persistir novos Alunos no banco de dados .
  */
-function incluirAluno() {
 
+//  angular.module('alunos', [])
+// .config(function($routeProvider){
+//     $routeProvider
+//     .when('/', {
+//         templateUrl: 'http://localhost:8080/pi-frontend/presenca.jsp'
+//     })
+//     .when('http://localhost:8080/interdisciplinar-project/aluno/incluirNovoAluno', {
+//         templateUrl: 'http://localhost:8080/pi-frontend/aluno/aluno-adicionar.jsp',
+//         controller: 'CtrlAdd'
+//     })
+//     .when('http://localhost:8080/pi-frontend/aluno/:index', {
+//         templateUrl: 'http://localhost:8080/pi-frontend/aluno/aluno-editar.jsp',
+//         controller: 'CtrlEdit'
+//     });
+// })
+angular
+    .module('alunos', [])
+
+    .config(function($routeProvider) {
+
+        $routeProvider
+            .when('/', {
+                templateUrl: 'http://localhost:8080/pi-frontend/presenca.jsp'
+            })
+            .when('/pessoa/adicionar', {
+                templateUrl: 'adicionar.html',
+                controller:  'CtrlAdicionar'
+            })
+            .when('/aluno/:index', {
+                templateUrl: 'http://localhost:8080/pi-frontend/aluno/aluno-editar.jsp',
+                controller: 'CtrlEditar'
+            });
+
+    })
+.controller('alunos', function($scope){
+    $scope.alunos = [
+              {nome: 'Maria1', email: 'Flopis'},
+              {nome: 'Maria2', email: 'Flopis2'},
+              {nome: 'Maria3', email: 'Flopis3'},
+              {nome: 'Maria4', email: 'Flopis4'}
+    ]
+})
+.controller('CtrlAdd', function($scope){
+    $scope.add = function(){
+        $scope.alunos.push($scope.aluno);
+            // nome: $scope.pessoa.nome,
+            // cidade: $scope.pessoa.cidade
+        // });
+
+        // $scope.pessoa.nome = "";
+        // $scope.pessoa.cidade = "";
+        $scope.aluno = "";
+        $scope.result = "Registro adicionadodo com sucesso!";
+    };
+})
+.controller('CtrlEdit', function($scope, $routeParams){
+    $scope.aluno = $scope.alunos[$routeParams.index];
+});
+
+function incluirAluno() {
     var nome = jQuery("#nome").val();
     var email = jQuery("#email").val();
     var form = {

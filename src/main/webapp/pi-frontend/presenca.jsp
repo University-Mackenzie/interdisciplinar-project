@@ -114,11 +114,13 @@
                                     <h4 class="label-names">Nome do Aluno</h4>
                                     <h4 class="label-names label-presenca">Status de Presença</h4>
 
+                                    <div ng-view></div>
+
                                     <div class="form-group col-md-12" ng-repeat="aluno in alunos">
                                         <div class="wrap-alunos">
                                             <ul class="">
                                                 <li>
-                                                    <a class="item-aluno" href="#">{{aluno.nome}}</a>
+                                                    <a class="item-aluno" href="/pi-frontend/aluno/{{$index}}">{{aluno.nome}}</a>
                                                 </li>
                                             </ul>
                                         </div><!-- .form-group .col-md-12 -->
