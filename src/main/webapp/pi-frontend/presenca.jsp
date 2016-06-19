@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="pt-br" ng-app>
+<html lang="pt-br" ng-app="alunosP">
 
 <head>
     <title>Projeto Interdisciplinar - Home</title>
@@ -113,8 +113,6 @@
                                 <div class="row">
                                     <h4 class="label-names">Nome do Aluno</h4>
                                     <h4 class="label-names label-presenca">Status de Presença</h4>
-
-                                    <div ng-view></div>
 
                                     <div class="form-group col-md-12" ng-repeat="aluno in alunos">
                                         <div class="wrap-alunos">
