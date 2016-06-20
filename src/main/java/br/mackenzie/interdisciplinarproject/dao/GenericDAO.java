@@ -22,5 +22,7 @@ public interface GenericDAO<T, PK extends Serializable> {
 	void excluir(T entidade);
 
 	void atualizar(T entidade);
+	
+
 
 }

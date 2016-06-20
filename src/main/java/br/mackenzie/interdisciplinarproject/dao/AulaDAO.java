@@ -9,6 +9,6 @@ import br.mackenzie.interdisciplinarproject.model.Aula;
  */
 public interface AulaDAO extends GenericDAO<Aula, Long> {
 	
-	
+	 Aula buscarAlunoPorId(int id);
 
 }

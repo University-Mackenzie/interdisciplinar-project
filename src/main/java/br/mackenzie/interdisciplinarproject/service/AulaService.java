@@ -11,4 +11,33 @@ public interface AulaService {
 	 * @return
 	 */
 	List<Aula> listarAulas();
+	
+	/**
+	 * 
+	 * inserir aula
+	 * 
+	 * @param aula
+	 */
+	void inserirAula(Aula aula);
+	
+	/**
+	 * 
+	 * deletar aula
+	 * 
+	 */
+	void deletarAula(Aula aula);
+	
+	/**
+	 * 
+	 * atualizar aula
+	 * 
+	 */
+	void atualizarAula(Aula aula);
+	
+	/**
+	 * 
+	 * Buscar aula por Id
+	 * 
+	 */
+	Aula AulaPorId(int id);
 }

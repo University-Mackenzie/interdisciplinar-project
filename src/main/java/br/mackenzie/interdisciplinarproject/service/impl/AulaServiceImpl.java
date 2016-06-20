@@ -21,4 +21,26 @@ public class AulaServiceImpl implements AulaService{
 	public List<Aula> listarAulas() {
 		return aulaDAO.listar();
 	}
+
+	@Override
+	public void inserirAula(Aula aula) { 
+		aulaDAO.incluir(aula);
+		
+	}
+
+	@Override
+	public void deletarAula(Aula aula) {
+		aulaDAO.excluir(aula);
+		
+	}
+
+	@Override
+	public void atualizarAula(Aula aula) {
+		aulaDAO.atualizar(aula);
+	}
+
+	@Override
+	public Aula AulaPorId(int id) {
+		return aulaDAO.buscarAlunoPorId(id);
+	}
 }

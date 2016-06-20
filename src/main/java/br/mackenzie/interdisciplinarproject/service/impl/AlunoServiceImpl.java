@@ -10,7 +10,6 @@ import br.mackenzie.interdisciplinarproject.dao.AlunoDAO;
 import br.mackenzie.interdisciplinarproject.dto.AlunoDTO;
 import br.mackenzie.interdisciplinarproject.model.Aluno;
 import br.mackenzie.interdisciplinarproject.service.AlunoService;
-import br.mackenzie.interdisciplinarproject.util.DTOUtil;
 
 /**
  * 
@@ -32,9 +31,31 @@ public class AlunoServiceImpl implements AlunoService{
 	@Override
 	public void inserirAluno(AlunoDTO alunoDTO) {
 		Aluno aluno = new Aluno();
-		//DTOUtil.copiarPropriedades(aluno, alunoDTO, DTOUtil.obterNomesAtributos(AlunoDTO.class));
 		aluno.setEmail(alunoDTO.getEmail());
 		aluno.setNome(alunoDTO.getNome());
 		alunoDAO.incluir(aluno);
+	}
+	
+	
+	public Aluno buscarAluno(String nome){
+		return alunoDAO.buscarAlunoPorNome(nome);
+	}
+
+	@Override
+	public void atualizarAluno(AlunoDTO alunoDTO) {
+		Aluno aluno = new Aluno();
+		aluno.setEmail(alunoDTO.getEmail());
+		aluno.setNome(alunoDTO.getNome());
+		aluno.setTia(alunoDTO.getTia());
+		alunoDAO.atualizar(aluno);
+	}
+
+	@Override
+	public void deletarAluno(AlunoDTO alunoDTO) {
+		Aluno aluno = new Aluno();
+		aluno.setEmail(alunoDTO.getEmail());
+		aluno.setNome(alunoDTO.getNome());
+		aluno.setTia(alunoDTO.getTia());
+		alunoDAO.excluir(aluno);		
 	}
 }

@@ -2,7 +2,7 @@
  * Funcao controller "usuarios".
  */
 function usuarios($scope, $http) {
-    $http.get('http://localhost:8080/interdisciplinar-project/usuario/listar').
+    $http.get('http://localhost:8082/interdisciplinar-project/usuario/listar').
         success(function (data) {
             $scope.usuarios = data;
         });
@@ -12,7 +12,7 @@ function usuarios($scope, $http) {
  * Funcao controller "alunos".
  */
 function alunos($scope, $http) {
-    $http.get('http://localhost:8080/interdisciplinar-project/aluno/listar').
+    $http.get('http://localhost:8082/interdisciplinar-project/aluno/listar').
         success(function (data) {
             $scope.alunos = data;
         });
@@ -38,7 +38,7 @@ function incluirComponente() {
 
     jQuery.ajax({
         type: "POST",
-        url: "http://localhost:8080/componente/incluirNovoComponente/" + tia,
+        url: "http://localhost:8082/componente/incluirNovoComponente/" + tia,
         data: json,
         contentType: "application/json;charset=utf-8",
         success: function (cliente) {
@@ -69,7 +69,7 @@ function incluirUsuario() {
 
     jQuery.ajax({
         type: "POST",
-        url: "http://localhost:8080/interdisciplinar-project/usuario/incluirNovoUsuario",
+        url: "http://localhost:8082/interdisciplinar-project/usuario/incluirNovoUsuario",
         data: json,
         contentType: "application/json;charset=utf-8",
         success: function (nome) {
@@ -90,14 +90,14 @@ angular
 
         $routeProvider
             .when('/', {
-                templateUrl: 'http://localhost:8080/pi-frontend/presenca.jsp'
+                templateUrl: 'http://localhost:8082/pi-frontend/presenca.jsp'
             })
-            .when('http://localhost:8080/interdisciplinar-project/aluno/incluirNovoAluno', {
-                templateUrl: 'http://localhost:8080/pi-frontend/aluno/aluno-adicionar.jsp',
+            .when('http://localhost:8082/interdisciplinar-project/aluno/incluirNovoAluno', {
+                templateUrl: 'http://localhost:8082/pi-frontend/aluno/aluno-adicionar.jsp',
                 controller: 'CtrlAdd'
             })
-            .when('http://localhost:8080/pi-frontend/aluno/:index', {
-                templateUrl: 'http://localhost:8080/pi-frontend/aluno/aluno-editar.jsp',
+            .when('http://localhost:8082/pi-frontend/aluno/:index', {
+                templateUrl: 'http://localhost:8082/pi-frontend/aluno/aluno-editar.jsp',
                 controller: 'CtrlEditar'
             });
 
@@ -136,13 +136,13 @@ function incluirAluno() {
 
     jQuery.ajax({
         type: "POST",
-        url: "http://localhost:8080/interdisciplinar-project/aluno/incluirNovoAluno",
+        url: "http://localhost:8082/interdisciplinar-project/aluno/incluirNovoAluno",
         data: json,
         contentType: "application/json;charset=utf-8",
         success: function (nome) {
 
         	alert("Adicionado Com sucesso!");
-            window.location="http://localhost:8080/pi-frontend/index.jsp";
+            window.location="http://localhost:8082/pi-frontend/index.jsp";
         }
     });
 }
