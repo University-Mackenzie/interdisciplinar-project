@@ -48,13 +48,29 @@ public class ComponenteController {
 		return jsonComponentes;
 	}
 	
-    @RequestMapping(value = "/incluirNovoComponente", method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/incluirNovoComponente", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-	public void inserirComponente(@PathVariable(value = "tia") int tia, @RequestBody ComponenteDTO componenteDTO){
+//	public void inserirComponente(@PathVariable(value = "tia") int tia, @RequestBody ComponenteDTO componenteDTO){
+    public void inserirComponente(@RequestBody ComponenteDTO componenteDTO){
     	Usuario usuario = new Usuario();
-    	usuario.setTia(tia);
+//    	usuario.setTia(tia);
     	componenteservice.inserirComponente(usuario,componenteDTO);
 	}
+    
+    @RequestMapping(value = "/atualizarComponente", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public void atualizarComponente(@RequestBody ComponenteDTO componenteDTO){
+    	Usuario usuario = new Usuario();
+    	componenteservice.atualizarComponente(usuario,componenteDTO);
+    }
+    
+    @RequestMapping(value = "/deletarComponente", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public void deletarComponente(@RequestBody ComponenteDTO componenteDTO){
+    	Usuario usuario = new Usuario();
+    	componenteservice.deletarComponente(usuario,componenteDTO);
+    }
 }

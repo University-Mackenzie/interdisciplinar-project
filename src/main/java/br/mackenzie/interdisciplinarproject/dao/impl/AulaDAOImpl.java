@@ -31,10 +31,4 @@ public class AulaDAOImpl extends GenericDAOImpl<Aula, Long> implements AulaDAO {
             return null;
         }
 	}
-	
-	
-	
-
-
-
 }

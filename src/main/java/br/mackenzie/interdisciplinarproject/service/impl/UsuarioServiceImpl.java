@@ -31,10 +31,37 @@ public class UsuarioServiceImpl implements UsuarioService{
 	@Override
 	public void inserirUsuario(UsuarioDTO usuarioDTO) {
 		Usuario usuario = new Usuario();
-		//DTOUtil.copiarPropriedades(aluno, alunoDTO, DTOUtil.obterNomesAtributos(AlunoDTO.class));
 		usuario.setEmail(usuarioDTO.getEmail());
 		usuario.setNome(usuarioDTO.getNome());
+		usuario.setTia(usuarioDTO.getTia());
+		usuario.setTipo_monitor(usuarioDTO.getTipo_monitor());
 		usuario.setImg_perfil(usuarioDTO.getImg_perfil());
 		usuarioDAO.incluir(usuario);
+	}
+	
+	@Override
+	public void atualizarUsuario(UsuarioDTO usuarioDTO) {
+		Usuario usuario = new Usuario();
+		usuario.setEmail(usuarioDTO.getEmail());
+		usuario.setNome(usuarioDTO.getNome());
+		usuario.setTia(usuarioDTO.getTia());
+		usuario.setTipo_monitor(usuarioDTO.getTipo_monitor());
+		usuario.setImg_perfil(usuarioDTO.getImg_perfil());
+		usuarioDAO.atualizar(usuario);
+	}
+	
+	@Override
+	public void deletarUsuario(UsuarioDTO usuarioDTO) {
+		Usuario usuario = new Usuario();
+		usuario.setEmail(usuarioDTO.getEmail());
+		usuario.setNome(usuarioDTO.getNome());
+		usuario.setTia(usuarioDTO.getTia());
+		usuario.setTipo_monitor(usuarioDTO.getTipo_monitor());
+		usuario.setImg_perfil(usuarioDTO.getImg_perfil());
+		usuarioDAO.excluir(usuario);
+	}
+
+	public Usuario buscarUsuario(String nome){
+		return usuarioDAO.buscarUsuarioPorNome(nome);
 	}
 }

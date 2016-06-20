@@ -46,11 +46,24 @@ public class UsuarioController {
 		return jsonUsuarios;
 	}
 	
-	@RequestMapping(value = "/incluirNovoUsuario", method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/incluirNovoUsuario", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
 	public void inserirUsuario(@RequestBody UsuarioDTO usuarioDTO){
     	usuarioservice.inserirUsuario(usuarioDTO);
+	}
+	
+	@RequestMapping(value = "/atualizarUsuario", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	public void atualizarUsuario(@RequestBody UsuarioDTO usuarioDTO){
+		usuarioservice.atualizarUsuario(usuarioDTO);
+	}
+	
+	@RequestMapping(value = "/deletarUsuario", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	public void deletarUsuario(@RequestBody UsuarioDTO usuarioDTO){
+		usuarioservice.deletarUsuario(usuarioDTO);
 	}
 }

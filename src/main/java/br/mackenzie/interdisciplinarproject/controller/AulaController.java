@@ -73,5 +73,4 @@ public class AulaController {
 				aulaDTO.getIdSala());
 		aulaservice.deletarAula(aula);
 	}
-
 }

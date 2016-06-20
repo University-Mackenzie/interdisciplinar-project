@@ -9,10 +9,8 @@ function usuarios($scope, $http) {
 }
 
 /**
-<<<<<<< HEAD
  * FUNÇOES CLASS COMPONENTES
  * Funcao para persistir novos Componentes no banco de dados .
-=======
  * Funcao controller "alunos".
  */
 function alunos($scope, $http) {
@@ -24,7 +22,6 @@ function alunos($scope, $http) {
 
 /**
  * Funcao para incluir novos Componentes.
->>>>>>> 15ad1fbd946f1d28139cb5081a85a0bfcd7bd4e4
  */
 function incluirComponente() {
     var id = jQuery("#id").val();
@@ -43,11 +40,7 @@ function incluirComponente() {
 
     jQuery.ajax({
         type: "POST",
-<<<<<<< HEAD
         url: "http://localhost:8080/interdisciplinar-project/componente/incluirNovoComponente",
-=======
-        url: "http://localhost:8082/componente/incluirNovoComponente/" + tia,
->>>>>>> 15ad1fbd946f1d28139cb5081a85a0bfcd7bd4e4
         data: json,
         contentType: "application/json;charset=utf-8",
         success: function (cliente) {
@@ -84,7 +77,7 @@ function incluirUsuario() {
         contentType: "application/json;charset=utf-8",
         success: function (nome) {
 
-        	alert("Gravado com Sucesso!");
+            alert("Gravado com Sucesso!");
             window.location="http://localhost:8080/pi-frontend/monitoria.jsp";
         }
     });
@@ -162,13 +155,8 @@ function incluirAluno() {
         contentType: "application/json;charset=utf-8",
         success: function (nome) {
 
-<<<<<<< HEAD
             alert("Adicionado com sucesso!");
             window.location="http://localhost:8080/pi-frontend/index.jsp";
-=======
-        	alert("Adicionado Com sucesso!");
-            window.location="http://localhost:8082/pi-frontend/index.jsp";
->>>>>>> 15ad1fbd946f1d28139cb5081a85a0bfcd7bd4e4
         }
     });
 }
@@ -195,7 +183,7 @@ function atualizarAluno() {
         contentType: "application/json;charset=utf-8",
         success: function (nome) {
 
-        	alert("Atualizado com sucesso!");
+            alert("Atualizado com sucesso!");
             window.location="http://localhost:8080/pi-frontend/presenca.jsp";
         }
     });

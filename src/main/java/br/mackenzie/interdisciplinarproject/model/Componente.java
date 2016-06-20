@@ -24,16 +24,14 @@ public class Componente {
 	@Column(name = "nome")
 	private String nome;
 
+	@Column(name = "img_path")
 	private String img_path;
 	
-
-	public String getImg_path() {
-		return img_path;
-	}
-
-	public void setImg_path(String img_path) {
-		this.img_path = img_path;
-	}
+	@Column(name = "descricao")
+	private String descricao;
+	
+	@Column(name = "tia_fk")
+	private int tia_fk;
 
 	/**
 	 * Construtor com seus parâmetros.
@@ -71,5 +69,29 @@ public class Componente {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getImg_path() {
+		return img_path;
+	}
+
+	public void setImg_path(String img_path) {
+		this.img_path = img_path;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getTia_fk() {
+		return tia_fk;
+	}
+
+	public void setTia_fk(int tia_fk) {
+		this.tia_fk = tia_fk;
 	}
 }
