@@ -94,7 +94,7 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
                             <h2 class="title-page">Cadastrar Monitor</h2>
-                            <form method="post">
+                            <form action="upload.do" enctype="multipart/form-data" method="post">
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <!--<label for="campo1">Componente</label>-->
@@ -113,7 +113,7 @@
  -->
                                     <div class="form-group col-md-12">
                                         <!--<label for="campo2">Campo Um</label>-->
-                                        <input type="file" class="form-control" id="img_perfil" valeu="teste" required>
+                                        <input type="file" class="form-control" id="img_perfil" value="teste" required>
                                     </div>
 
                                     <div class="enwrap-radio-user line-1">

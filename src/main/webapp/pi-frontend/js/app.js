@@ -9,17 +9,8 @@ function usuarios($scope, $http) {
 }
 
 /**
- * Funcao controller "alunos".
- */
-function alunos($scope, $http) {
-    $http.get('http://localhost:8080/interdisciplinar-project/aluno/listar').
-        success(function (data) {
-            $scope.alunos = data;
-        });
-}
-
-/**
- * Funcao para incluir novos Componentes.
+ * FUNÇOES CLASS COMPONENTES
+ * Funcao para persistir novos Componentes no banco de dados .
  */
 function incluirComponente() {
     var id = jQuery("#id").val();
@@ -38,7 +29,7 @@ function incluirComponente() {
 
     jQuery.ajax({
         type: "POST",
-        url: "http://localhost:8080/componente/incluirNovoComponente/" + tia,
+        url: "http://localhost:8080/interdisciplinar-project/componente/incluirNovoComponente",
         data: json,
         contentType: "application/json;charset=utf-8",
         success: function (cliente) {
@@ -49,7 +40,8 @@ function incluirComponente() {
 }
 
 /**
- * Funcao para incluir novos Monitores.
+ * FUNÇOES CLASS USUARIOS=MONITORES
+ * Funcao para persistir novos Usuarios no banco de dados .
  */
 function incluirUsuario() {
     // var id = jQuery("#idUser").val();
@@ -75,6 +67,7 @@ function incluirUsuario() {
         success: function (nome) {
 
         	alert("Gravado com Sucesso!");
+            window.location="http://localhost:8080/pi-frontend/monitoria.jsp";
         }
     });
 }
@@ -122,7 +115,17 @@ angular
 });
 
 /**
- *
+ * Funcao controller para listar "alunos".
+ */
+function alunos($scope, $http) {
+    $http.get('http://localhost:8080/interdisciplinar-project/aluno/listar').
+        success(function (data) {
+            $scope.alunos = data;
+        });
+}
+
+/**
+ * Funcao controller para Incluir novos "alunos".
  */
 function incluirAluno() {
     var nome = jQuery("#nome").val();
@@ -141,8 +144,36 @@ function incluirAluno() {
         contentType: "application/json;charset=utf-8",
         success: function (nome) {
 
-        	alert("Adicionado Com sucesso!");
+            alert("Adicionado com sucesso!");
             window.location="http://localhost:8080/pi-frontend/index.jsp";
+        }
+    });
+}
+
+/**
+ * Funcao controller para atualuzar os "alunos".
+ */
+function atualizarAluno() {
+    var tia = jQuery("#tia").val();
+    var nome = jQuery("#nome").val();
+    var email = jQuery("#email").val();
+    var form = {
+        tia: tia,
+        nome: nome,
+        email: email
+    }
+
+    var json = JSON.stringify(form);
+
+    jQuery.ajax({
+        type: "POST",
+        url: "http://localhost:8080/interdisciplinar-project/aluno/atualizarAluno",
+        data: json,
+        contentType: "application/json;charset=utf-8",
+        success: function (nome) {
+
+        	alert("Atualizado com sucesso!");
+            window.location="http://localhost:8080/pi-frontend/presenca.jsp";
         }
     });
 }

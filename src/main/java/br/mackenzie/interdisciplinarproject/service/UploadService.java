@@ -12,4 +12,5 @@ public interface UploadService {
 	//List<Aluno> listarAlunos();
 	public void processRequest();
 	public void FileUpload(HttpServletRequest request, HttpServletResponse response);
+	public String getString();
 }

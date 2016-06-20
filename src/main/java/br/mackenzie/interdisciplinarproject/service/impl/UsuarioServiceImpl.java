@@ -34,6 +34,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 		//DTOUtil.copiarPropriedades(aluno, alunoDTO, DTOUtil.obterNomesAtributos(AlunoDTO.class));
 		usuario.setEmail(usuarioDTO.getEmail());
 		usuario.setNome(usuarioDTO.getNome());
+		usuario.setImg_perfil(usuarioDTO.getImg_perfil());
 		usuarioDAO.incluir(usuario);
 	}
 }

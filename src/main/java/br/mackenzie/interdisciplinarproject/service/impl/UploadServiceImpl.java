@@ -1,35 +1,49 @@
 package br.mackenzie.interdisciplinarproject.service.impl;
 
-import java.io.File;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Iterator;
-import java.util.List;
+import java.io.InputStream;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import antlr.collections.List;
+import br.mackenzie.interdisciplinarproject.service.UploadService;
 
-@Service
-@Transactional
-public class UploadServiceImpl extends HttpServlet {
-
-	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		response.setContentType("text/html;charset=UTF-8");
-		PrintWriter out = response.getWriter();
-
-		try {
-
-			//this.FileUpload(request, response);
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-	}
+//package br.mackenzie.interdisciplinarproject.service.impl;
+//
+//import java.io.File;
+//import java.io.IOException;
+//import java.io.PrintWriter;
+//import java.util.Iterator;
+//import java.util.List;
+//
+//import javax.servlet.ServletException;
+//import javax.servlet.http.HttpServlet;
+//import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletResponse;
+//
+//import org.springframework.stereotype.Service;
+//import org.springframework.transaction.annotation.Transactional;
+//
+//@Service
+//@Transactional
+//public class UploadServiceImpl extends HttpServlet {
+//
+//	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+//			throws ServletException, IOException {
+//		response.setContentType("text/html;charset=UTF-8");
+//		PrintWriter out = response.getWriter();
+//
+//		try {
+//
+//			//this.FileUpload(request, response);
+//		} catch (Exception ex) {
+//			ex.printStackTrace();
+//		}
+//	}
 
 //	private String FileUpload(HttpServletRequest request, HttpServletResponse response) throws Exception {
 //		DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -55,4 +69,4 @@ public class UploadServiceImpl extends HttpServlet {
 //		nome = "/uploads/monitores/" + nome;
 //		return nome;
 //	}
-}
+//}

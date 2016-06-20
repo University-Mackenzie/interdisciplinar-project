@@ -54,4 +54,12 @@ public class AlunoController {
 	public void inserirAluno(@RequestBody AlunoDTO alunoDTO){
     	alunoservice.inserirAluno(alunoDTO);
 	}
+    
+    @RequestMapping(value = "/atualizarAluno", method = RequestMethod.POST,
+    		consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public void atualizarAluno(@RequestBody AlunoDTO alunoDTO){
+    	alunoservice.atualizarAluno(alunoDTO);
+    }
 }

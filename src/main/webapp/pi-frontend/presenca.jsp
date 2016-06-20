@@ -118,7 +118,7 @@
                                         <div class="wrap-alunos">
                                             <ul class="">
                                                 <li>
-                                                    <a class="item-aluno" href="/pi-frontend/aluno/{{$index}}">{{aluno.nome}}</a>
+                                                    <a class="item-aluno" href="/pi-frontend/aluno/{{$index}}" data-toggle="modal" data-target="#modal2">{{aluno.nome}}</a>
                                                 </li>
                                             </ul>
                                         </div><!-- .form-group .col-md-12 -->
@@ -188,7 +188,19 @@
 				</form>
 			</div>
 		</div>
-	</div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-popup">
+                <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+                <h3 class="white">Entrar</h3>
+                <form action="" class="popup-form">
+                    <input type="{{aluno.nome}}">
+                </form>
+            </div>
+        </div>
+    </div>
 
 	<footer>
         <div class="container">

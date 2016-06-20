@@ -37,4 +37,14 @@ public class AlunoServiceImpl implements AlunoService{
 		aluno.setNome(alunoDTO.getNome());
 		alunoDAO.incluir(aluno);
 	}
+	
+	@Override
+	public void atualizarAluno(AlunoDTO alunoDTO) {
+		Aluno aluno = new Aluno();
+		//DTOUtil.copiarPropriedades(aluno, alunoDTO, DTOUtil.obterNomesAtributos(AlunoDTO.class));
+		aluno.setNome(alunoDTO.getNome());
+		aluno.setEmail(alunoDTO.getEmail());
+		aluno.setTia(alunoDTO.getTia());
+		alunoDAO.atualizar(aluno);
+	}
 }
