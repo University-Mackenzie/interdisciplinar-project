@@ -8,48 +8,61 @@ import java.sql.Date;
  *
  */
 public class AulaDTO {
-	
-	/**
-	 * 
-	 */
-	private String componente;
-	private int ID_Sala;
+
+	private int idAula;
 	private String professor;
+	private String disciplina;
 	private Date data;
-	private int ID_Aula;
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public String getComponente() {
-		return componente;
+	private int idSala;
+
+	public AulaDTO() {
 	}
-	public void setComponente(String componente) {
-		this.componente = componente;
+
+	public AulaDTO(int idAula, String professor, String disciplina, Date data, int idSala) {
+		this.idAula = idAula;
+		this.professor = professor;
+		this.disciplina = disciplina;
+		this.data = data;
+		this.idSala = idSala;
 	}
-	public int getID_Sala() {
-		return ID_Sala;
+
+	public int getIdAula() {
+		return idAula;
 	}
-	public void setID_Sala(int iD_Sala) {
-		ID_Sala = iD_Sala;
+
+	public void setIdAula(int idAula) {
+		this.idAula = idAula;
 	}
+
 	public String getProfessor() {
 		return professor;
 	}
+
 	public void setProfessor(String professor) {
 		this.professor = professor;
 	}
+
+	public String getDisciplina() {
+		return disciplina;
+	}
+
+	public void setDisciplina(String disciplina) {
+		this.disciplina = disciplina;
+	}
+
 	public Date getData() {
 		return data;
 	}
+
 	public void setData(Date data) {
 		this.data = data;
 	}
-	public int getID_Aula() {
-		return ID_Aula;
+
+	public int getIdSala() {
+		return idSala;
 	}
-	public void setID_Aula(int iD_Aula) {
-		ID_Aula = iD_Aula;
+
+	public void setIdSala(int idSala) {
+		this.idSala = idSala;
 	}
 }

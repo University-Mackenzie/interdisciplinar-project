@@ -20,7 +20,6 @@ public class Aluno {
 	@Column(name = "Tia")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int tia;
-	
 	@Column(name = "nome")
 	private String nome;
 	@Column(name = "email")

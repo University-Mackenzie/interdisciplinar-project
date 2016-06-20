@@ -45,12 +45,11 @@ public abstract class GenericDAOImpl<T, PK extends Serializable> implements Gene
     public void incluir(T entidade) {
         this.entityManager.persist(entidade);
         this.entityManager.flush();
-        this.entityManager.detach(entidade);
     }
 
     @Override
     public void excluir(T entidade) {
-        this.entityManager.remove(entidade);
+        this.entityManager.remove(entityManager.merge(entidade));
         this.entityManager.flush();
     }
 
@@ -67,5 +66,6 @@ public abstract class GenericDAOImpl<T, PK extends Serializable> implements Gene
         }
         return this.persistentClass;
     }
+    
 
 }
