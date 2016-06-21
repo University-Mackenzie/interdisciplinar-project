@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import br.mackenzie.interdisciplinarproject.dto.AlunoDTO;
+import br.mackenzie.interdisciplinarproject.dto.ChamadaDTO;
 import br.mackenzie.interdisciplinarproject.model.Chamada;
 import br.mackenzie.interdisciplinarproject.service.ChamadaService;
 import br.mackenzie.interdisciplinarproject.util.Utils;
@@ -25,12 +26,12 @@ import br.mackenzie.interdisciplinarproject.util.Utils;
 @Controller
 @RequestMapping("/chamada")
 public class ChamadaController {
-	
+
 	@Autowired
 	private ChamadaService chamadaservice;
-	
+
 	Utils utils = new Utils();
-	
+
 	/**
 	 * Metodo que tem como funcao listar Chamadas em aulas.
 	 * 
@@ -45,4 +46,26 @@ public class ChamadaController {
 		String jsonChamadas = utils.convertToJson(chamadas);
 		return jsonChamadas;
 	}
+
+	@RequestMapping(value = "/incluirNovoChamada", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	public void inserirAluno(@RequestBody ChamadaDTO chamadaDTO) {
+		chamadaservice.inserirChamada(chamadaDTO);
+	}
+
+	@RequestMapping(value = "/atualizarChamda", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	public void atualizarAluno(@RequestBody ChamadaDTO chamadaDTO) {
+		chamadaservice.atualizarChamada(chamadaDTO);
+	}
+
+	@RequestMapping(value = "/deletarChamda", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseStatus(HttpStatus.OK)
+	@ResponseBody
+	public void deletarAluno(@RequestBody ChamadaDTO chamadaDTO) {
+		chamadaservice.deletarChamada(chamadaDTO);
+	}
+
 }

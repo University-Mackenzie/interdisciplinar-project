@@ -29,13 +29,12 @@ public class EmailController {
 	 */
 	@RequestMapping(value = "/enviaremail", method = RequestMethod.GET)
 	@ResponseBody
-	public void listar() {
+	public void enviarEmail() {
 
 	try {
 		emailservice.generateAndSendEmail();
 	} catch (MessagingException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+		System.out.println("Nao foi possivel enviar email");
 	}
 
 	}

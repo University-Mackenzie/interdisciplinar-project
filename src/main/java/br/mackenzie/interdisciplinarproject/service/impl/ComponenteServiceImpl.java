@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import br.mackenzie.interdisciplinarproject.dao.ComponenteDAO;
 import br.mackenzie.interdisciplinarproject.dto.ComponenteDTO;
 import br.mackenzie.interdisciplinarproject.model.Componente;
-import br.mackenzie.interdisciplinarproject.model.Usuario;
 import br.mackenzie.interdisciplinarproject.service.ComponenteService;
 
 /**
@@ -30,18 +29,18 @@ public class ComponenteServiceImpl implements ComponenteService {
 	}
 
 	@Override
-	public void inserirComponente(Usuario usuario, ComponenteDTO componenteDTO) {
+	public void inserirComponente(ComponenteDTO componenteDTO) {
 		Componente componente = new Componente();
 		componente.setNome(componenteDTO.getNome());
 		componente.setCodigo(componenteDTO.getCodigo());
 		componente.setImg_path(componenteDTO.getImg_path());
 		componente.setTia_fk(componenteDTO.getTia_fk());
-//		componente.setDescricao(componenteDTO.getDescricao());
+		componente.setDescricao(componenteDTO.getDescricao());
 		componenteDAO.incluir(componente);
 	}
 	
 	@Override
-	public void atualizarComponente(Usuario usuario, ComponenteDTO componenteDTO) {
+	public void atualizarComponente(ComponenteDTO componenteDTO) {
 			Componente componente = new Componente();
 			componente.setNome(componenteDTO.getNome());
 			componente.setCodigo(componenteDTO.getCodigo());
@@ -52,7 +51,7 @@ public class ComponenteServiceImpl implements ComponenteService {
 	}
 	
 	@Override
-	public void deletarComponente(Usuario usuario, ComponenteDTO componenteDTO) {
+	public void deletarComponente(ComponenteDTO componenteDTO) {
 		Componente componente = new Componente();
 		componente.setNome(componenteDTO.getNome());
 		componente.setCodigo(componenteDTO.getCodigo());

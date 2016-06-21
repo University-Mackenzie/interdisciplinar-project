@@ -7,22 +7,17 @@ package br.mackenzie.interdisciplinarproject.dto;
  */
 public class ChamadaDTO {
 	
-	/**
-	 * 
-	 */
-	private int ID_Sala;
+
+	private int idAula;
 	private int tia;
 	private int presenca;
 	
-	/**
-	 * 
-	 * @return
-	 */
-	public int getID_Sala() {
-		return ID_Sala;
+
+	public int getIdAula() {
+		return idAula;
 	}
-	public void setID_Sala(int iD_Sala) {
-		ID_Sala = iD_Sala;
+	public void setIdAula(int idAula) {
+		this.idAula = idAula;
 	}
 	public int getTia() {
 		return tia;

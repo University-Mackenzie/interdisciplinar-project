@@ -34,7 +34,7 @@ public class AulaController {
 	Utils utils = new Utils();
 
 	/**
-	 * Metodo que tem como funcao listar Aulas.
+	 * Listar Aulas.
 	 * 
 	 * @return jsonAulas
 	 */

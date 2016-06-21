@@ -3,9 +3,7 @@ package br.mackenzie.interdisciplinarproject.service;
 import java.util.List;
 
 import br.mackenzie.interdisciplinarproject.dto.ComponenteDTO;
-import br.mackenzie.interdisciplinarproject.dto.UsuarioDTO;
 import br.mackenzie.interdisciplinarproject.model.Componente;
-import br.mackenzie.interdisciplinarproject.model.Usuario;
 
 public interface ComponenteService {
 	
@@ -21,14 +19,14 @@ public interface ComponenteService {
 	 * 
 	 * @param componenteDTO
 	 */
-	public void inserirComponente(Usuario usuario,ComponenteDTO componenteDTO);
+	public void inserirComponente(ComponenteDTO componenteDTO);
 	
 	/**
 	 * Atualizar Componente
 	 * 
 	 * @param componenteDTO
 	 */
-	void atualizarComponente(Usuario usuario,ComponenteDTO componenteDTO);
+	void atualizarComponente(ComponenteDTO componenteDTO);
 	
 	
 	/**
@@ -36,7 +34,7 @@ public interface ComponenteService {
 	 * 
 	 * @param componenteDTO
 	 */
-	void deletarComponente(Usuario usuario,ComponenteDTO componenteDTO);
+	void deletarComponente(ComponenteDTO componenteDTO);
 	
 	/**
 	 * 
